@@ -4,19 +4,11 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 //int main(int argc, char *argv[]) 
 
-static int all_files;
-
-extern void sub();
-
-int main(void)
+int factorial(int n)
 {
-	sub();
-	printf("%d\n", all_files);
-	return 0;
-}
-extern int all_files;
-void sub(void)
-{
-	all_files =10;
+	if (n<=1) 
+		return(1);
+	else
+		return(n*factorial(n-1));
 }
 
